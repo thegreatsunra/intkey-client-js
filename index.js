@@ -15,3 +15,5 @@ const payload = {
   Value: 42
 }
 
+const payloadBytes = cbor.encode(payload)
+
