@@ -51,3 +51,5 @@ const batchHeaderBytes = protobuf.BatchHeader.encode({
   transactionIds: transactions.map((txn) => txn.headerSignature),
 }).finish()
 
+const signature = signer.sign(batchHeaderBytes)
+
