@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "cbor": "^3.0.3",
+    "request": "^2.83.0",
     "sawtooth-sdk": "^1.0.1"
   },
   "devDependencies": {
