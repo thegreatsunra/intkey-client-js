@@ -46,3 +46,8 @@ const transaction = protobuf.Transaction.create({
 
 const transactions = [transaction]
 
+const batchHeaderBytes = protobuf.BatchHeader.encode({
+  signerPublicKey: signer.getPublicKey().asHex(),
+  transactionIds: transactions.map((txn) => txn.headerSignature),
+}).finish()
+
