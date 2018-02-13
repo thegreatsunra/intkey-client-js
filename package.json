@@ -1,7 +1,7 @@
 {
   "name": "intkey-client-js",
   "description": "An intkey client using the Hyperledger Sawtooth Javascript SDK",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/thegreatsunra/intkey-client-js",
   "repository": {
     "type": "git",
@@ -10,12 +10,22 @@
   "bugs": {
     "url": "https://github.com/thegreatsunra/intkey-client-js/issues"
   },
+  "author": "Dane Petersen <thegreatsunra@gmail.com>",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Dane Petersen",
+      "email": "thegreatsunra@gmail.com",
+      "url": "https://github.com/thegreatsunra"
+    }
+  ],
   "engines": {
     "node": ">= 8.1.0",
     "npm": ">= 5.0.3"
   },
   "dependencies": {
     "cbor": "^3.0.3",
+    "request": "^2.83.0",
     "sawtooth-sdk": "^1.0.1"
   },
   "devDependencies": {
