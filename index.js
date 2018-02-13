@@ -38,3 +38,9 @@ const transactionHeaderBytes = protobuf.TransactionHeader.encode({
 
 const txnSignature = signer.sign(transactionHeaderBytes)
 
+const transaction = protobuf.Transaction.create({
+  header: transactionHeaderBytes,
+  headerSignature: txnSignature,
+  payload: payloadBytes
+})
+
