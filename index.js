@@ -12,14 +12,17 @@ const signer = new CryptoFactory(context).newSigner(privateKey)
 // if a custom address isn't provided, default to localhost:8008
 const address = process.argv[2] || 'http://localhost:8008'
 
+// define the transaction payload
 const payload = {
   Verb: 'inc',
   Name: 'foo',
   Value: 42
 }
 
+// encode the payload with cbor
 const payloadBytes = cbor.encode(payload)
 
+// define the transaction header and encode it with protobuf
 const transactionHeaderBytes = protobuf.TransactionHeader.encode({
   familyName: 'intkey',
   familyVersion: '1.0',
