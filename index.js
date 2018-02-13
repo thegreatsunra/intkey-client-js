@@ -8,3 +8,10 @@ const context = createContext('secp256k1')
 const privateKey = context.newRandomPrivateKey()
 const signer = new CryptoFactory(context).newSigner(privateKey)
 
+
+const payload = {
+  Verb: 'inc',
+  Name: 'foo',
+  Value: 42
+}
+
