@@ -70,4 +70,7 @@ request.post({
   url: `${address}/batches`,
   body: batchListBytes,
   headers: { 'Content-Type': 'application/octet-stream' }
+}, (err, response) => {
+  if (err) return console.log(err)
+  console.log(response.body)
 })
