@@ -44,3 +44,5 @@ const transaction = protobuf.Transaction.create({
   payload: payloadBytes
 })
 
+const transactions = [transaction]
+
