@@ -10,6 +10,15 @@
   "bugs": {
     "url": "https://github.com/thegreatsunra/intkey-client-js/issues"
   },
+  "author": "Dane Petersen <thegreatsunra@gmail.com>",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Dane Petersen",
+      "email": "thegreatsunra@gmail.com",
+      "url": "https://github.com/thegreatsunra"
+    }
+  ],
   "engines": {
     "node": ">= 8.1.0",
     "npm": ">= 5.0.3"
