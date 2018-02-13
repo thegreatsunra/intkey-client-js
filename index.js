@@ -8,6 +8,9 @@ const context = createContext('secp256k1')
 const privateKey = context.newRandomPrivateKey()
 const signer = new CryptoFactory(context).newSigner(privateKey)
 
+// use REST API address:port provided by user at command line
+// if a custom address isn't provided, default to localhost:8008
+const address = process.argv[2] || 'http://localhost:8008'
 
 const payload = {
   Verb: 'inc',
