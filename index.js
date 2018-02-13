@@ -59,3 +59,7 @@ const batch = protobuf.Batch.create({
   transactions: transactions
 })
 
+const batchListBytes = protobuf.BatchList.encode({
+  batches: [batch]
+}).finish()
+
