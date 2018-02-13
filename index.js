@@ -35,3 +35,6 @@ const transactionHeaderBytes = protobuf.TransactionHeader.encode({
   dependencies: [],
   payloadSha512: createHash('sha512').update(payloadBytes).digest('hex')
 }).finish()
+
+const txnSignature = signer.sign(transactionHeaderBytes)
+
