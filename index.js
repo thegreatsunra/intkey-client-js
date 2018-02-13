@@ -68,4 +68,6 @@ const batchListBytes = protobuf.BatchList.encode({
 
 request.post({
   url: `${address}/batches`,
+  body: batchListBytes,
+  headers: { 'Content-Type': 'application/octet-stream' }
 })
