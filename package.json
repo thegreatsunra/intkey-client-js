@@ -1,7 +1,7 @@
 {
   "name": "intkey-client-js",
   "description": "An intkey client using the Hyperledger Sawtooth Javascript SDK",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/thegreatsunra/intkey-client-js",
   "repository": {
     "type": "git",
