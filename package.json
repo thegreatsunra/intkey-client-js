@@ -31,14 +31,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cbor": "^4.0.0",
-    "dotenv": "^5.0.0",
+    "dotenv": "^5.0.1",
     "request": "^2.83.0",
     "sawtooth-sdk": "^1.0.1",
     "yargs": "^11.0.0"
   },
   "devDependencies": {
     "eslint": "^4.18.1",
-    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
