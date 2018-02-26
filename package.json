@@ -1,7 +1,7 @@
 {
   "name": "intkey-client-js",
   "description": "An intkey client using the Hyperledger Sawtooth Javascript SDK",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/thegreatsunra/intkey-client-js",
   "repository": {
     "type": "git",
@@ -14,6 +14,11 @@
   "license": "MIT",
   "contributors": [
     {
+      "name": "Jake Ingman",
+      "email": "jingman@gmail.com",
+      "url": "https://github.com/jingman"
+    },
+    {
       "name": "Dane Petersen",
       "email": "thegreatsunra@gmail.com",
       "url": "https://github.com/thegreatsunra"
@@ -24,20 +29,24 @@
     "npm": ">= 5.0.3"
   },
   "dependencies": {
-    "cbor": "^3.0.3",
+    "axios": "^0.18.0",
+    "cbor": "^4.0.0",
+    "dotenv": "^5.0.1",
     "request": "^2.83.0",
-    "sawtooth-sdk": "^1.0.1"
+    "sawtooth-sdk": "^1.0.1",
+    "yargs": "^11.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.17.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^6.0.0",
+    "eslint": "^4.18.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1"
   },
   "main": "index.js",
   "scripts": {
+    "init": "node init.js",
     "lint": "eslint --ext .js *.config* src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
