@@ -3,6 +3,8 @@ require('dotenv').config()
 
 const { leafHash } = require('./sawtooth-client')
 
+const familyName = 'intkey'
+const familyVersion = '1.0'
 const env = {
   privateKey: process.env.PRIVATE_KEY || '',
   publicKey: process.env.PUBLIC_KEY || '',
@@ -10,9 +12,9 @@ const env = {
     url: process.env.VALIDATOR_URL || 'http://localhost:8008'
   },
   family: {
-    name: 'intkey',
-    prefix: leafHash('intkey', 6),
-    version: '1.0'
+    name: familyName,
+    prefix: leafHash(familyName, 6),
+    version: familyVersion
   }
 }
 
