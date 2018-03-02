@@ -13,7 +13,7 @@ const SawtoothClientFactory = (factoryOptions) => {
       try {
         const res = await axios({
           method: 'get',
-          baseURL: factoryOptions.validatorURL,
+          baseURL: factoryOptions.restApiUrl,
           url
         })
         return res
@@ -79,7 +79,7 @@ const SawtoothClientFactory = (factoryOptions) => {
           try {
             const res = await axios({
               method: 'post',
-              baseURL: factoryOptions.validatorURL,
+              baseURL: factoryOptions.restApiUrl,
               url: '/batches',
               headers: { 'Content-Type': 'application/octet-stream' },
               data: batchListBytes
