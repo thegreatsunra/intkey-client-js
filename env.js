@@ -8,9 +8,7 @@ const familyVersion = '1.0'
 const env = {
   privateKey: process.env.PRIVATE_KEY || '',
   publicKey: process.env.PUBLIC_KEY || '',
-  restApi: {
-    url: process.env.REST_API_URL || 'http://localhost:8888'
-  },
+  restApiUrl: process.env.REST_API_URL || 'http://localhost:8888',
   family: {
     name: familyName,
     prefix: leafHash(familyName, 6),
