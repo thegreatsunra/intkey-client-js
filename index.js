@@ -23,7 +23,7 @@ const enclave = EnclaveFactory(Buffer.from(env.privateKey, 'hex'))
 
 const intkeyClient = SawtoothClientFactory({
   enclave: enclave,
-  validatorURL: env.validator.url
+  restApiUrl: env.restApi.url
 })
 
 const intkeyTransactor = intkeyClient.newTransactor({
