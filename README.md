@@ -11,10 +11,10 @@ cd intkey-client-js
 
 npm install
 
-# Generate public/private keys and a placeholder Sawtooth validator URL
+# Generate public/private keys and a placeholder Sawtooth REST API URL
 node init.js
 
-# Finally, open the .env file created by `node init.js` and change VALIDATOR_URL to the IP address of your Sawtooth validator
+# Finally, open the .env file created by `node init.js` and change REST_API_URL to the address and port of your Sawtooth REST API
 ```
 
 ## Usage
