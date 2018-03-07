@@ -11,10 +11,18 @@ cd intkey-client-js
 
 npm install
 
-# Generate public/private keys and a placeholder Sawtooth REST API URL
+## Generate public/private keys and a placeholder Sawtooth REST API URL
 node init.js
+```
 
-# Finally, open the .env file created by `node init.js` and change REST_API_URL to the address and port of your Sawtooth REST API
+Next, open the `.env` file created by `node init.js` and change the value for `REST_API_URL` to the address and port of your Sawtooth REST API.
+
+If you're using [sawtooth-rest-api-proxy](https://github.com/thegreatsunra/sawtooth-rest-api-proxy) you should use `https://`, set the host to the public domain address of your server, and use port `8888`.
+
+For example:
+
+```bash
+REST_API_URL=https://awesome-server.domain.tld:8888
 ```
 
 ## Usage
