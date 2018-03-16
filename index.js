@@ -28,8 +28,8 @@ const intkeyClient = SawtoothClientFactory({
 })
 
 const intkeyTransactor = intkeyClient.newTransactor({
-  familyName: env.family.name,
-  familyVersion: env.family.version
+  familyName: env.familyName,
+  familyVersion: env.familyVersion
 })
 
 const newPayload = {
