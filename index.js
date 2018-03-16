@@ -1,6 +1,4 @@
 const { EnclaveFactory } = require('./enclave')
-const env = require('./env')
-const input = require('./input')
 const { SawtoothClientFactory } = require('./sawtooth-client')
 const argv = require('yargs')
   .usage('Usage: node $0 --name [string] --verb [set,inc,dec] --value [integer]')
@@ -18,6 +16,9 @@ const argv = require('yargs')
   .help('h')
   .alias('h', 'help')
   .argv
+
+const env = require('./env')
+const input = require('./input')
 
 const enclave = EnclaveFactory(Buffer.from(env.privateKey, 'hex'))
 
