@@ -1,6 +1,6 @@
 # intkey-client-js
 
-> An intkey client using the Hyperledger Sawtooth Javascript SDK
+> An intkey client/transactor using the Hyperledger Sawtooth Javascript SDK
 
 ## Getting started
 
