@@ -15,5 +15,5 @@ fs.writeFile(path.resolve(__dirname, './.env'), output, (err) => {
   }
 })
 
-console.log('\nGenerated .env file with public/private keys\n')
+console.log('\nGenerated .env file with public/private keys and REST API URL\n')
 console.log(output, '\n')

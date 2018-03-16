@@ -41,5 +41,5 @@ const newPayload = {
 if (input.payloadIsValid(newPayload)) {
   input.submitPayload(newPayload, intkeyTransactor)
 } else {
-  console.log('Your payload is garbage')
+  console.log(`Oops! Your payload failed validation and was not submitted.`)
 }
