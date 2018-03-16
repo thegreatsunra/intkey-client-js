@@ -15,14 +15,22 @@ npm install
 node init.js
 ```
 
-Next, open the `.env` file created by `node init.js` and change the value for `REST_API_URL` to the address and port of your Sawtooth REST API.
+### Configuring the Sawtooth REST API URL
+
+By default, the intkey client will attempt to connect to a Sawtooth REST API at `http://localhost:8008`.
+
+To connect to a REST API at a different URL:
+
+1. Edit the `.env` file, which was created above by running `node init.js`
+1. In `.env`, change the value of `REST_API_URL` to the location of your Sawtooth REST API
+1. The next time you run `node index.js` the URL you specified in `.env` will be used automatically 
 
 If you're using [sawtooth-rest-api-proxy](https://github.com/thegreatsunra/sawtooth-rest-api-proxy) you should use `https://`, set the host to the public domain address of your server, and use port `8888`.
 
 For example:
 
 ```bash
-REST_API_URL=https://awesome-server.domain.tld:8888
+REST_API_URL=https://my-sawtooth-api-proxy.my-domain.tld:8888
 ```
 
 ## Usage
