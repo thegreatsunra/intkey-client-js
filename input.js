@@ -7,7 +7,7 @@ const input = {
     try {
       // Format the Sawtooth transaction
       const txn = payload
-      console.log(`Submitting report transaction to Sawtooth REST API`)
+      console.log(`Submitting transaction to Sawtooth REST API`)
       // Wait for the response from the validator receiving the transaction
       const txnRes = await transactor.post(txn)
       // Log only a few key items from the response, because it's a lot of info

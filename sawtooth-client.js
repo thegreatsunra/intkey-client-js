@@ -1,7 +1,7 @@
-const protobuf = require('sawtooth-sdk/protobuf')
-const cbor = require('cbor')
 const { randomBytes, createHash } = require('crypto')
 const axios = require('axios')
+const cbor = require('cbor')
+const protobuf = require('sawtooth-sdk/protobuf')
 
 const leafHash = (input, length) => {
   return createHash('sha512').update(input).digest('hex').toLowerCase().slice(0, length)

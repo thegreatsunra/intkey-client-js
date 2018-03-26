@@ -1,19 +1,17 @@
 // Import PRIVATE_KEY, PUBLIC_KEY, VALIDATOR_URL from .env file
-require('dotenv').config()
+const dotenv = require('dotenv')
 
 const { leafHash } = require('./sawtooth-client')
 
-const familyName = 'intkey'
-const familyVersion = '1.0'
+dotenv.config()
+
 const env = {
   privateKey: process.env.PRIVATE_KEY || '',
   publicKey: process.env.PUBLIC_KEY || '',
-  restApiUrl: process.env.REST_API_URL || 'http://localhost:8888',
-  family: {
-    name: familyName,
-    prefix: leafHash(familyName, 6),
-    version: familyVersion
-  }
+  restApiUrl: process.env.REST_API_URL || 'http://localhost:8008',
+  familyName: 'intkey',
+  familyPrefix: leafHash('intkey', 6),
+  familyVersion: '1.0'
 }
 
 module.exports = env

@@ -1,7 +1,7 @@
 {
   "name": "intkey-client-js",
-  "description": "An intkey client using the Hyperledger Sawtooth Javascript SDK",
-  "version": "0.3.0",
+  "description": "An intkey client/transactor using the Hyperledger Sawtooth Javascript SDK",
+  "version": "0.4.0",
   "homepage": "https://github.com/thegreatsunra/intkey-client-js",
   "repository": {
     "type": "git",
@@ -32,16 +32,16 @@
     "axios": "^0.18.0",
     "cbor": "^4.0.0",
     "dotenv": "^5.0.1",
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "sawtooth-sdk": "^1.0.1",
     "yargs": "^11.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.18.2",
+    "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1"
   },
   "main": "index.js",

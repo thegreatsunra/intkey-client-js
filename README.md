@@ -1,6 +1,6 @@
 # intkey-client-js
 
-> An intkey client using the Hyperledger Sawtooth Javascript SDK
+> An intkey client/transactor using the Hyperledger Sawtooth Javascript SDK
 
 ## Getting started
 
@@ -11,10 +11,26 @@ cd intkey-client-js
 
 npm install
 
-# Generate public/private keys and a placeholder Sawtooth REST API URL
+## Generate public/private keys and a placeholder Sawtooth REST API URL
 node init.js
+```
 
-# Finally, open the .env file created by `node init.js` and change REST_API_URL to the address and port of your Sawtooth REST API
+### Configuring the Sawtooth REST API URL
+
+By default, the intkey client will attempt to connect to a Sawtooth REST API at `http://localhost:8008`.
+
+To connect to a REST API at a different URL:
+
+1. Edit the `.env` file, which was created above by running `node init.js`
+1. In `.env`, change the value of `REST_API_URL` to the location of your Sawtooth REST API
+1. The next time you run `node index.js` the URL you specified in `.env` will be used automatically 
+
+If you're using [sawtooth-rest-api-proxy](https://github.com/thegreatsunra/sawtooth-rest-api-proxy) you should use `https://`, set the host to the public domain address of your server, and use port `8888`.
+
+For example:
+
+```bash
+REST_API_URL=https://my-sawtooth-api-proxy.my-domain.tld:8888
 ```
 
 ## Usage
@@ -43,3 +59,9 @@ node index.js --help
 ## Notes
 
 Need an intkey transaction processor? Try [intkey-tp-js](https://github.com/thegreatsunra/intkey-client-js).
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2018 Dane Petersen

@@ -1,6 +1,4 @@
 const { EnclaveFactory } = require('./enclave')
-const env = require('./env')
-const input = require('./input')
 const { SawtoothClientFactory } = require('./sawtooth-client')
 const argv = require('yargs')
   .usage('Usage: node $0 --name [string] --verb [set,inc,dec] --value [integer]')
@@ -19,6 +17,9 @@ const argv = require('yargs')
   .alias('h', 'help')
   .argv
 
+const env = require('./env')
+const input = require('./input')
+
 const enclave = EnclaveFactory(Buffer.from(env.privateKey, 'hex'))
 
 const intkeyClient = SawtoothClientFactory({
@@ -27,8 +28,8 @@ const intkeyClient = SawtoothClientFactory({
 })
 
 const intkeyTransactor = intkeyClient.newTransactor({
-  familyName: env.family.name,
-  familyVersion: env.family.version
+  familyName: env.familyName,
+  familyVersion: env.familyVersion
 })
 
 const newPayload = {
@@ -40,5 +41,5 @@ const newPayload = {
 if (input.payloadIsValid(newPayload)) {
   input.submitPayload(newPayload, intkeyTransactor)
 } else {
-  console.log('Your payload is garbage')
+  console.log(`Oops! Your payload failed validation and was not submitted.`)
 }
