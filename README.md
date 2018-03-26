@@ -59,3 +59,9 @@ node index.js --help
 ## Notes
 
 Need an intkey transaction processor? Try [intkey-tp-js](https://github.com/thegreatsunra/intkey-client-js).
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2018 Dane Petersen
